@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 62.5%;
+
+	--Brightorange: hsl(31, 77%, 52%);
+	--Darkcyan: hsl(184, 100%, 22%);
+	--Verydarkcyan: hsl(179, 100%, 13%);
+
+	--Transparentwhite: hsla(0, 0%, 100%, 0.75);
+	--Verylightgray: hsl(0, 0%, 95%);
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	background-color: var(--Verylightgray);
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 4rem 0;
+}
+
+.sedans,
+.suv,
+.luxury {
+	padding: 4rem;
+	height: 39rem;
+	width: 28rem;
+}
+
+.sedans {
+	background-color: var(--Brightorange);
+	border-radius: 1rem 1rem 0 0;
+}
+.suv {
+	background-color: var(--Darkcyan);
+}
+.luxury {
+	background-color: var(--Verydarkcyan);
+	border-radius: 0 0 1rem 1rem;
+}
+
+.main-name {
+	font-family: "Big Shoulders Display", cursive;
+	font-size: 3.5rem;
+	font-weight: 700;
+	color: var(--Verylightgray);
+	margin: 3rem 0;
+	text-transform: uppercase;
+}
+
+.text {
+	font-family: "Lexend Deca", sans-serif;
+	color: var(--Transparentwhite);
+	font-size: 1.3rem;
+	font-weight: 700;
+	line-height: 1.5;
+	margin: 3rem 0;
+}
+
+.sedans .button {
+	color: var(--Brightorange);
+}
+
+.suv .button {
+	color: var(--Darkcyan);
+}
+
+.luxury .button {
+	color: var(--Verydarkcyan);
+}
+
+.button {
+	font-family: "Lexend Deca", sans-serif;
+	font-size: 1.3rem;
+	text-decoration: none;
+	display: inline-block;
+	font-weight: 700;
+	line-height: 1.5;
+	border-radius: 2rem;
+	padding: 0.7rem 2.5rem;
+	border: none;
+	color: transparent;
+	cursor: pointer;
+	background-color: var(--Verylightgray);
+	border: 3px solid var(--Verylightgray);
+}
+
+.button:hover {
+	background-color: transparent;
+	color: var(--Transparentwhite);
+	color: var(--Transparentwhite);
+}
+
+.attribution {
+	font-size: 1.6rem;
+	font-family: "Lexend Deca", sans-serif;
+	font-weight: 700;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 750px) {
+	main {
+		flex-direction: row;
+		margin: 5rem auto 0;
+	}
+
+	.sedans,
+	.suv,
+	.luxury {
+		padding: 5rem 6rem 4rem 4rem;
+		height: 45rem;
+		width: 28rem;
+	}
+
+	.no-wrap {
+		white-space: nowrap;
+	}
+
+	.sedans {
+		border-radius: 1rem 0 0 1rem;
+	}
+
+	.luxury {
+		border-radius: 0 1rem 1rem 0;
+	}
+
+	.button {
+		margin: 4rem 0 0;
+	}
+
+	.attribution {
+		margin: 5rem auto 0;
+	}
+}
